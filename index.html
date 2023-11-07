@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+    <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>JointDreamer: Joint Score Distillation for Text-to-3D Generation via Universal Guidance Model</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+
+      gtag('config', 'G-PYVRSFMDRL');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/favicon.svg"> <!-- your picture-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+  </head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://keunhong.com">
+        <span class="icon">
+            <i class="fas fa-home"></i>
+        </span>
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://jointdreamer.github.io">
+              JointDreamer
+            </a>
+            <a class="navbar-item" href="https://fastt3d.github.io">
+              Fast-T3D
+            </a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </nav>
+  
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">JointDreamer: Joint Score Distillation for Text-to-3D Generation via Universal Guidance Model</h1>
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+            </span>
+          </div> -->
+
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Washington,</span>
+            <span class="author-block"><sup>2</sup>Google Research</span>
+          </div> -->
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="./assets/supp_materials_fastt3d.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Project -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span>Project</span>
+                </a>
+              </span>
+              <!-- Gallery Link. -->
+              <span class="link-block">
+                <a href="gallery.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab wand-magic-sparkles"></i>
+                  </span>
+                  <span>Gallery</span>
+                  </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code Coming Soon</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Score Distillation Sampling (SDS) has shown great promise in text-to-3D generation by distilling the pre-trained 2D image distribution 
+            to the rendered image distribution from a 3D representation. However, we reveal that SDS conducts distillation on each view independently, 
+            lacking awareness of coherence across views and inheriting the biased 2D image distribution, resulting in inconsistent 3D scenes. 
+          </p>
+          <p>
+            In this work, we propose Joint Score Distillation (JSD), a new rule of score distillation to recover a consistent 3D scene. Specifically,  
+            we re-formulate the score distillation jointly across multiple views, guided by the coherency across these views. On top of that, we present 
+            an efficient yet effective coherency binary classifier that can serve as a guidance source. We further leverage other guidance models, demonstrating 
+            that JSD can seamlessly integrate with universal guidance models to enhance geometric consistency.
+          </p>
+          <p>
+            Our overall approach, named JointDreamer, is capable of generating highly 3D consistent and high-fidelity 3D assets through various 3D representations, 
+            including NeRF and DMTet. JointDreamer sets a new state-of-the-art performance standard, as supported by both qualitative and quantitative evaluations. 
+          </p>
+        </div>
+        <img src="./static/images/framework.PNG">
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <hr>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Joint Score Distillation</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our JSD extend the Score Distillation to include multiple views. This fosters coherence between different views of 3D representation, 
+            promoting convergence toward a 3D-consistent representation.
+          </p>
+        </div> 
+        <div class="compositional captioned_videos">
+          <video class="video lazy" autoplay loop playsinline muted>
+              <source data-src="static/visualization.mp4" type="video/mp4"></source>
+          </video>
+      </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Comparison Results</h2>
+        <div class="content has-text-justified">
+          <p>We collected 40 prompts from different sources to compare with other text-to-3D methods. A fixed default configuration is used for all
+             prompts without hyper-paramter tuning with <a href="https://github.com/threestudio-project/threestudio">threestudio</a>.</p>
+        </div>
+      </div>
+
+      <div class="column is-full-width">
+      <div class="row" style="margin-bottom: 0px;">
+        <div class="col-xs-15 compare-title  compare-title-sm">
+            <p>Dreamfusion-IF</p>
+        </div>
+        <div class="col-xs-15 compare-title">
+            <p>Magic3D-IF-SD</p>
+        </div>
+        <div class="col-xs-15 compare-title">
+            <p>Text2Mesh-IF</p>
+        </div>
+        <div class="col-xs-15 compare-title">
+            <p>ProlificDreamer</p>
+        </div>
+        <div class="col-xs-15 compare-title">
+            <p>Ours</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+
+  </div>
+</section>
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <!-- <div class="column is-8"> -->
+        <div class="content">
+          <p>
+            This website is constructed using the source code provided by <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, 
+            allow us to express our appreciation for their contribution.                              
+          </p>
+    
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
