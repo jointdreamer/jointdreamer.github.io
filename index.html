@@ -51,11 +51,11 @@
     </div>
     <div class="navbar-menu">
       <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-        <a class="navbar-item" href="https://keunhong.com">
+        <!-- <a class="navbar-item" href="https://keunhong.com">
         <span class="icon">
             <i class="fas fa-home"></i>
         </span>
-        </a>
+        </a> -->
   
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
@@ -65,9 +65,9 @@
             <a class="navbar-item" href="https://jointdreamer.github.io">
               JointDreamer
             </a>
-            <a class="navbar-item" href="https://fastt3d.github.io">
+            <!-- <a class="navbar-item" href="https://fastt3d.github.io">
               Fast-T3D
-            </a>
+            </a> -->
           </div>
         </div>
       </div>
@@ -81,7 +81,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">JointDreamer: Joint Score Distillation for Text-to-3D Generation via Universal Guidance Model</h1>
+          <h1 class="title is-1 publication-title">JointDreamer: Ensuring Geometry Consistency and Text Congruence in Text-to-3D Generation via Joint Score Distillation</h1>
           <!-- <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
@@ -122,7 +122,7 @@
               </span> -->
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="./assets/supp_materials_fastt3d.pdf"
+                <a href="./assets/JointDreamer_Appendix.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -139,7 +139,7 @@
               </span>
               <!-- Gallery Link. -->
               <span class="link-block">
-                <a href="gallery.html"
+                <a href=".gallery.html"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab wand-magic-sparkles"></i>
@@ -191,22 +191,26 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Score Distillation Sampling (SDS) has shown great promise in text-to-3D generation by distilling the pre-trained 2D image distribution 
-            to the rendered image distribution from a 3D representation. However, we reveal that SDS conducts distillation on each view independently, 
-            lacking awareness of coherence across views and inheriting the biased 2D image distribution, resulting in inconsistent 3D scenes. 
+            Score Distillation Sampling (SDS) by well-trained 2D diffusion models has shown great promise in text-to-3D generation. 
+            However, this paradigm distills view-agnostic 2D image distributions into the rendering distribution of 3D representation 
+            for each view independently, overlooking the coherence across views and yielding 3D inconsistency in generations.
           </p>
           <p>
-            In this work, we propose Joint Score Distillation (JSD), a new rule of score distillation to recover a consistent 3D scene. Specifically,  
-            we re-formulate the score distillation jointly across multiple views, guided by the coherency across these views. On top of that, we present 
-            an efficient yet effective coherency binary classifier that can serve as a guidance source. We further leverage other guidance models, demonstrating 
-            that JSD can seamlessly integrate with universal guidance models to enhance geometric consistency.
+            In this work, we propose Joint Score Distillation (JSD), a new paradigm that ensures coherent 3D generations. Specifically, 
+            we model the joint rendering distribution, which introduces an energy function to capture the coherence among rendered views. 
+            We then derive the joint score distillation on multiple rendered views, as opposed to a single view in SDS. In addition, 
+            we propose an efficient yet effective binary classification model as an energy function, along with other universal 
+            view-aware models, demonstrating compatibility with JSD.
           </p>
           <p>
-            Our overall approach, named JointDreamer, is capable of generating highly 3D consistent and high-fidelity 3D assets through various 3D representations, 
-            including NeRF and DMTet. JointDreamer sets a new state-of-the-art performance standard, as supported by both qualitative and quantitative evaluations. 
+            Empirically, JSD significantly mitigates the 3D inconsistency problem in SDS by a 70% drop in Janus rate, 
+            while maintaining text congruence. Moreover, we introduce the Geometry Fading scheme and Classifier-Free Guidance (CFG) 
+            Switching strategy to enhance generative details. Our framework, JointDreamer, establishes a new benchmark in 
+            text-to-3D generation, achieving outstanding results with an 88.5% CLIP R-Precision and 27.7% CLIP Score. 
+            These metrics demonstrate exceptional text congruence, as well as remarkable geometric consistency and texture fidelity.
           </p>
         </div>
-        <img src="./static/images/framework.PNG">
+        <img src="./static/images/framework.pdf">
       </div>
     </div>
     <!--/ Abstract. -->
