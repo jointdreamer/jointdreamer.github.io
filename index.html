@@ -1,306 +1,308 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="description"
-          content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-    <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>JointDreamer: Joint Score Distillation for Text-to-3D Generation via Universal Guidance Model</title>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XB3PR2Y1TQ"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-
-      gtag('js', new Date());
-
-      gtag('config', 'G-PYVRSFMDRL');
+    gtag('config', 'G-XB3PR2Y1TQ');
     </script>
 
-    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>JointDreamer: Joint Score Distillation for Text-to-3D Generation via Universal Guidance Model</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/assets/css/Highlight-Clean.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
 
-    <link rel="stylesheet" href="./static/css/bulma.min.css">
-    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <link rel="stylesheet" href="./static/css/index.css">
-    <link rel="icon" href="./static/images/favicon.svg"> <!-- your picture-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script defer src="./static/js/fontawesome.all.min.js"></script>
-    <script src="./static/js/bulma-carousel.min.js"></script>
-    <script src="./static/js/bulma-slider.min.js"></script>
-    <script src="./static/js/index.js"></script>
-  </head>
+    <meta property="og:site_name" content="JointDreamer" />
+    <meta property="og:type" content="video.other" />
+    <meta property="og:title" content="JointDreamer: Joint Score Distillation for Text-to-3D Generation via Universal Guidance Model" />
+    <meta property="og:description" content="JointDreamer: Joint Score Distillation for Text-to-3D Generation via Universal Guidance Model, 2023." />
+    <meta property="og:url" content="" />
+
+    <script src="assets/js/video_comparison.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer@2.0.1/dist/model-viewer.min.js"></script>
+</head>
+
 <body>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-    <div class="navbar-menu">
-      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-        <!-- <a class="navbar-item" href="https://keunhong.com">
-        <span class="icon">
-            <i class="fas fa-home"></i>
-        </span>
-        </a> -->
-  
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            More Research
-          </a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://jointdreamer.github.io">
-              JointDreamer
-            </a>
-            <!-- <a class="navbar-item" href="https://fastt3d.github.io">
-              Fast-T3D
-            </a> -->
-          </div>
+    <div class="highlight-clean" style="padding-bottom: 10px;">
+        <div class="container" style="max-width: 768px;">
+            <h1 class="text-center"><b>JointDreamer</b>: Joint Score Distillation for Text-to-3D Generation via Universal Guidance Model</h1>
         </div>
-      </div>
-  
+        <div class="buttons" style="margin-bottom: 8px;">
+            <a class="btn btn-light" role="button" href="JointDreamer_Appendix.pdf">
+                <svg style="width:24px;height:24px;margin-left:-12px;margin-right:12px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4M10 10V12H18V10H10M10 14V16H15V14H10Z"></path>
+                </svg>Paper
+            </a>
+            <a class="btn btn-light disabled border border-dark" aria-disabled="true" role="button" href="#">
+                <svg style="visibility:hidden;width:0px;height:24px;margin-left:-12px;margin-right:12px" width="0px" height="24px" viewBox="0 0 375 531">
+                    <polygon stroke="#000000" points="0.5,0.866 459.5,265.87 0.5,530.874 "/>
+                </svg>
+                Project
+            </a>
+            <a class="btn btn-light" role="button" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px;margin-left:-12px;margin-right:12px" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729
+                            1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322
+                            3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823
+                            2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                </svg>
+                Code (Coming Soon)
+            </a>
+            <a class="btn btn-light" role="button" href="">
+<!--            <a class="btn btn-light" role="button" href="/gallery.html">-->
+                <svg style="width:24px;height:24px;margin-left:-12px;margin-right:12px" width="24px" height="24px" viewBox="0 0 375 531">
+                    <polygon stroke="#000000" points="0.5,0.866 459.5,265.87 0.5,530.874 "/>
+                </svg>
+                Gallery
+            </a>
+        </div>
     </div>
-  </nav>
-  
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">JointDreamer: Ensuring Geometry Consistency and Text Congruence in Text-to-3D Generation via Joint Score Distillation</h1>
-          <!-- <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span>
-          </div> -->
+<!--    <hr class="divider" />-->
+<!--    <div class="container" style="max-width: 768px;">-->
+<!--        <div class="row captioned_videos">-->
+<!--            <div class="col-md-12">-->
+<!--                &lt;!&ndash; Large format devices &ndash;&gt;-->
+<!--                <video class="video lazy d-none d-xs-none d-sm-block" autoplay loop playsinline muted poster="https://dreamfusion-cdn.ajayj.com/sept28/wipe_opposite_6x4_smoothstep.jpg">-->
+<!--                    <source data-src="https://dreamfusion-cdn.ajayj.com/sept28/wipe_opposite_6x4_smoothstep.mp4" type="video/mp4">-->
+<!--                </video>-->
+<!--                &lt;!&ndash; Small format devices &ndash;&gt;-->
+<!--                <video class="video lazy d-xs-block d-sm-none" autoplay loop playsinline muted poster="https://dreamfusion-cdn.ajayj.com/sept28/shaded_3x3_smoothstep.jpg">-->
+<!--                    <source data-src="https://dreamfusion-cdn.ajayj.com/sept28/shaded_3x3_smoothstep.mp4" type="video/mp4">-->
+<!--                </video>-->
+<!--                <h6 class="caption">JointDreamer excels in generating geometrically consistent and high-fidelity 3D assets,-->
+<!--                    adhering to complex textual descriptions.</h6>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
-          <!-- <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
-          </div> -->
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Abstract</h2>
+                <p>
+                    Score Distillation Sampling (SDS) by well-trained 2D diffusion models has shown great promise in text-to-3D generation.
+                    However, this paradigm distills view-agnostic 2D image distributions into the rendering distribution of 3D representation
+                    for each view independently, overlooking the coherence across views and yielding 3D inconsistency in generations.
+                </p>
+                <p>
+                    In this work, we propose Joint Score Distillation (JSD), a new paradigm that ensures coherent 3D generations. Specifically,
+                    we model the joint rendering distribution, which introduces an energy function to capture the coherence among rendered views.
+                    We then derive the joint score distillation on multiple rendered views, as opposed to a single view in SDS. In addition,
+                    we propose an efficient yet effective binary classification model as an energy function, along with other universal
+                    view-aware models, demonstrating compatibility with JSD.
+                </p>
+                <p>
+                    Empirically, JSD significantly mitigates the 3D inconsistency problem in SDS by a 70% drop in Janus rate,
+                    while maintaining text congruence. Moreover, we introduce the Geometry Fading scheme and Classifier-Free Guidance (CFG)
+                    Switching strategy to enhance generative details. Our framework, JointDreamer, establishes a new benchmark in
+                    text-to-3D generation, achieving outstanding results with an 88.5% CLIP R-Precision and 27.7% CLIP Score.
+                    These metrics demonstrate exceptional text congruence, as well as remarkable geometric consistency and texture fidelity.
+                </p>
+            </div>
+            <div class="col-md-12">
+                <img src="static/framework.png" alt="architecture" style="width: 100%">
+            </div>
+        </div>
+    </div>
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span> -->
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="./assets/JointDreamer_Appendix.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <!-- Project -->
-              <span class="link-block">
-                <a href="#"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span>Project</span>
-                </a>
-              </span>
-              <!-- Gallery Link. -->
-              <span class="link-block">
-                <a href=".gallery.html"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab wand-magic-sparkles"></i>
-                  </span>
-                  <span>Gallery</span>
-                  </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code Coming Soon</span>
-                  </a>
-              </span>
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Example generated objects</h2>
+                <p>JointDreamer generates objects ensuring geometry and textural consistency.</p>
+            </div>
+        </div>
+
+        <div class="row captioned_videos">
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex3" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/examples/panda.mp4" type="video/mp4">
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex3Merge" width="1002"></canvas>
+                </div>
+                <h6 class="caption">A panda rowing a boat in a pond, 8K, HD, photorealistic</h6>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex1" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/examples/dragon.mp4" type="video/mp4">
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex1Merge" width="1002"></canvas>
+                </div>
+                <h6 class="caption">A wide angle zoomed out DSLR photo of a red dragon dressed in a tuxedo and playing chess, 8K, HD, photorealistic</h6>
+            </div>
+        </div>
+
+        <div class="row captioned_videos">
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex2" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/examples/spiderman.mp4" type="video/mp4">
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex2Merge" width="1002"></canvas>
+                </div>
+                <h6 class="caption">A DSLR photo of a pink Spiderman dancing ballet, Marvel character HD, highly detailed 3D model</h6>
+            </div>
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex4" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/examples/queen.mp4" type="video/mp4">
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex4Merge" width="1002"></canvas>
+                </div>
+                <h6 class="caption">A DSLR photo of Queen Elizabeth riding a motorcycle, 8K, HD, photorealisti</h6>
             </div>
 
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section> -->
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Score Distillation Sampling (SDS) by well-trained 2D diffusion models has shown great promise in text-to-3D generation. 
-            However, this paradigm distills view-agnostic 2D image distributions into the rendering distribution of 3D representation 
-            for each view independently, overlooking the coherence across views and yielding 3D inconsistency in generations.
-          </p>
-          <p>
-            In this work, we propose Joint Score Distillation (JSD), a new paradigm that ensures coherent 3D generations. Specifically, 
-            we model the joint rendering distribution, which introduces an energy function to capture the coherence among rendered views. 
-            We then derive the joint score distillation on multiple rendered views, as opposed to a single view in SDS. In addition, 
-            we propose an efficient yet effective binary classification model as an energy function, along with other universal 
-            view-aware models, demonstrating compatibility with JSD.
-          </p>
-          <p>
-            Empirically, JSD significantly mitigates the 3D inconsistency problem in SDS by a 70% drop in Janus rate, 
-            while maintaining text congruence. Moreover, we introduce the Geometry Fading scheme and Classifier-Free Guidance (CFG) 
-            Switching strategy to enhance generative details. Our framework, JointDreamer, establishes a new benchmark in 
-            text-to-3D generation, achieving outstanding results with an 88.5% CLIP R-Precision and 27.7% CLIP Score. 
-            These metrics demonstrate exceptional text congruence, as well as remarkable geometric consistency and texture fidelity.
-          </p>
+        <div class="col-sm-4 my-auto center" style="margin-left: auto; margin-right: auto;">
+            <a href="#" class="btn btn-primary btn-lg btn-search">
+                Additional Examples (Coming soon)
+            </a>
         </div>
-        <img src="./static/images/framework.png">
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
-    <hr>
-
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Joint Score Distillation</h2>
-        <div class="content has-text-justified">
-          <p>
-            Our JSD extend the Score Distillation to include multiple views. This fosters coherence between different views of 3D representation, 
-            promoting convergence toward a 3D-consistent representation.
-          </p>
-        </div> 
-        <div class="compositional captioned_videos">
-          <video class="video lazy" autoplay loop playsinline muted>
-              <source data-src="static/visualization.mp4" type="video/mp4"></source>
-          </video>
-      </div>
-      </div>
     </div>
 
-    <hr>
 
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Comparison Results</h2>
-        <div class="content has-text-justified">
-          <p>We collected 14 prompts from different sources to compare with other text-to-3D methods. A fixed default configuration is used for all
-             prompts without hyper-paramter tuning with <a href="https://github.com/threestudio-project/threestudio">threestudio</a>.</p>
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Comparison Results</h2>
+                <p>We collected 14 prompts from different sources to compare with other text-to-3D methods. A fixed default configuration is used for all prompts without hyper-paramter tuning with <a href="https://github.com/threestudio-project/threestudio">threestudio</a>.</p>
+            </div>
         </div>
-      </div>
-    </div>
+        <div class="row" style="margin-bottom: 0px;">
+            <div class="col-xs-15 compare-title  compare-title-sm">
+                <p>Dreamfusion-IF</p>
+            </div>
+            <div class="col-xs-15 compare-title">
+                <p>Magic3D-IF-SD</p>
+            </div>
+            <div class="col-xs-15 compare-title">
+                <p>ProlificDreamer</p>
+            </div>
+            <div class="col-xs-15 compare-title">
+                <p>MVDream</p>
+            </div>
+            <div class="col-xs-15 compare-title">
+                <p>Ours</p>
+            </div>
+        </div>
+        <div class="row captioned_videos" id="comp" style="margin-top: 0px; margin-bottom: 0px ;">
+            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                <source data-src="static/comparison/a_zoomed_out_DSLR_photo_of_a_fox_working_on_a_jigsaw_puzzle,_8K,_HD,_photorealistic.mp4" type="video/mp4">
+            </video>
+            <p class="compare-caption">A zoomed out DSLR photo of a hippo biting through a watermelon, 8K, HD, photorealistic</p>
+        </div>
+        <div class="row captioned_videos" style="margin-top: 0px; margin-bottom: 0px ;">
+            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                <source data-src="static/comparison/a_zoomed_out_DSLR_photo_of_a_hippo_biting_through_a_watermelon,_8K,_HD,_photorealistic.mp4" type="video/mp4">
+            </video>
+            <p class="compare-caption">a DSLR photo of a fox working on a jigsaw puzzle, 8K, HD, photorealistic</p>
+        </div>
 
-    <div class="columns is-centered has-text-centered">
-      <div class="row" style="margin-bottom: 0px;">
-        <div class="col-xs-15 compare-title  compare-title-sm">
-            <p>Dreamfusion-IF</p>
+        <div class="col-sm-4 my-auto center" style="margin-left: auto; margin-right: auto;">
+            <a href="test.html" class="btn btn-primary btn-lg btn-search">
+                Full Test Results (Coming Soon)
+            </a>
         </div>
-        <div class="col-xs-15 compare-title">
-            <p>Magic3D-IF-SD</p>
-        </div>
-        <div class="col-xs-15 compare-title">
-            <p>ProlificDreamer</p>
-        </div>
-        <div class="col-xs-15 compare-title">
-            <p>MVDream</p>
-        </div>
-        <div class="col-xs-15 compare-title">
-            <p>Ours</p>
-        </div>
-      </div>
     </div>
 
 
 
+<!--    <hr class="divider" />-->
+<!--    <div class="container meshes" id="meshContainer" style="max-width: 768px;">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-12">-->
+<!--                <h2>Mesh exports</h2>-->
+<!--                <p>Our generated NeRF models can be exported to meshes using the marching cubes algorithm for easy integration into 3D renderers or modeling software.</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-6 col-sm-6 my-auto">-->
+<!--                <model-viewer alt="Sweater Frog"-->
+<!--                              src="assets/meshes/panda.obj"-->
+<!--                              poster="https://pub-b1f092b6867f4495b8f149d222a3bffe.r2.dev/meshes/sept28/sweaterfrog_1step.jpg"-->
+<!--                              environment-image="https://modelviewer.dev/shared-assets/environments/whipple_creek_regional_park_04_1k.hdr"-->
+<!--                              shadow-intensity="1" exposure="0.3" camera-controls touch-action="pan-y" ar-->
+<!--                              loading="lazy" reveal="manual" id="mesh1"-->
+<!--                              crossorigin="anonymous" style="height: 300px; width: 100%;">-->
+<!--                </model-viewer>-->
+<!--                <div class="controls">-->
+<!--                    <button class="btn btn-primary loads-model" data-controls="mesh1">Load 3D model</button>-->
+<!--                    <p class="caption" title="a DSLR photo of a frog wearing a sweater">[...] a frog wearing a sweater</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-6 col-sm-6 my-auto" style="position: relative">-->
+<!--                <model-viewer alt="Scorpion" src="assets/meshes/a_pig_wearing_a_backpack_1step.glb"-->
+<!--                              poster="https://pub-b1f092b6867f4495b8f149d222a3bffe.r2.dev/meshes/sept28/scorpion_1step.jpg"-->
+<!--                              environment-image="https://modelviewer.dev/shared-assets/environments/spruit_sunrise_1k_HDR.hdr"-->
+<!--                              shadow-intensity="1" exposure=".5" camera-controls touch-action="pan-y" ar-->
+<!--                              loading="lazy" reveal="manual" id="mesh2"-->
+<!--                              crossorigin="anonymous" style="height: 300px; width: 100%;">-->
+<!--                </model-viewer>-->
+<!--                <div class="controls">-->
+<!--                    <button class="btn btn-primary loads-model" data-controls="mesh2">Load 3D model</button>-->
+<!--                    <p class="caption" title="an iridescent metal scorpion">an iridescent metal scorpion</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
-  </div>
-</section>
 
+<!--    <hr class="divider" />-->
+<!--    <div class="container" style="max-width: 768px;">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-12">-->
+<!--                <h2>Citation</h2>-->
+<!--                <code>-->
+<!--                    @article{poole2022dreamfusion,<br>-->
+<!--                    &nbsp; author = {Poole, Ben and Jain, Ajay and Barron, Jonathan T. and Mildenhall, Ben},<br>-->
+<!--                    &nbsp; title  = {DreamFusion: Text-to-3D using 2D Diffusion},<br>-->
+<!--                    &nbsp; journal = {arXiv},<br>-->
+<!--                    &nbsp; year   = {2022},<br>-->
+<!--                }</code>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
-<!-- <section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
-  </div>
-</section> -->
-
-
-<footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <!-- <div class="column is-8"> -->
-        <div class="content">
-          <p>
-            This website is constructed using the source code provided by <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, 
-            allow us to express our appreciation for their contribution.                              
-          </p>
-    
-        </div>
-      </div>
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <footer>
+            <p> Website template from <a href="https://dreamfusion3d.github.io/">DreamFusion</a> and <a href="https://mv-dream.github.io/">MVDream</a>. We thank the authors for the open-source code.</p>
+        </footer>
     </div>
-  </div>
-</footer>
-
+    <script src="https://polyfill.io/v3/polyfill.js?features=IntersectionObserver"></script>
+    <script src="/assets/js/yall.js"></script>
+    <script>
+        yall(
+            {
+                observeChanges: true
+            }
+        );
+    </script>
+    <script src="/assets/js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/js/webflow.fd002feec.js"></script>
+    <!-- Import the component -->
 </body>
+
 </html>
