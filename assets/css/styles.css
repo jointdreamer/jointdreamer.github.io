@@ -511,9 +511,24 @@ h1, h2, h3, h4, h5, h6 {
     color: inherit;
 }
 
-p, .caption {
-    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-    margin-top: 4px;
+@media screen and (min-width: 575px) {
+    p, .caption {
+        font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+        margin-top: 4px;
+    }
+    .compare-title {
+        font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+        text-align: center;
+        width: 100%;
+        font-size: 16px;
+    }
+    .compare-caption {
+        font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+        margin-top: 0px;
+        text-align: center;
+        width: 100%;
+        font-size: 16px;
+    }
 }
 
 /* From Ref-NeRF */
@@ -766,9 +781,9 @@ hr.divider {
         float: left;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
     .col-lg-15 {
-        width: 20%;
+        width: 25%;
         float: left;
     }
 }
