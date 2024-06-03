@@ -101,13 +101,12 @@
                 </p>
                 <p>
                     In this work, we propose Joint Score Distillation (JSD), a new paradigm that ensures coherent 3D generations. Specifically,
-                    we model the joint rendering distribution, which introduces an energy function to capture the coherence among rendered views.
-                    We then derive the joint score distillation on multiple rendered views, as opposed to a single view in SDS. In addition,
-                    we propose an efficient yet effective binary classification model as an energy function, along with other universal
-                    view-aware models, demonstrating compatibility with JSD.
+                    we model the joint rendering distribution, which introduces an energy function to capture the coherence among denoised images from the diffusion model.
+                    We then derive the joint score distillation on multiple rendered views of the 3D representation, as opposed to a single view in SDS. In addition,
+                    we we instantiate three universal view-aware models as energy functions, demonstrating compatibility with JSD.
                 </p>
                 <p>
-                    Empirically, JSD significantly mitigates the 3D inconsistency problem in SDS by a 70% drop in Janus rate,
+                    Empirically, JSD significantly mitigates the 3D inconsistency problem in SDS,
                     while maintaining text congruence. Moreover, we introduce the Geometry Fading scheme and Classifier-Free Guidance (CFG)
                     Switching strategy to enhance generative details. Our framework, JointDreamer, establishes a new benchmark in
                     text-to-3D generation, achieving outstanding results with an 88.5% CLIP R-Precision and 27.7% CLIP Score.
@@ -289,6 +288,12 @@
             </video>
             <p class="compare-caption">a zoomed out DSLR photo of a bear playing electric bass</p>
         </div>
+        <div class="row captioned_videos" style="margin-top: 0px; margin-bottom: 0px ;">
+            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                <source data-src="static/comparison/Woodies_talking_with_each_other.mp4" type="video/mp4">
+            </video>
+            <p class="compare-caption">Woodies talking with each other, Toy Story, Anime style, more details, 8K, HD</p>
+        </div>
 
         <!-- <div class="col-sm-4 my-auto center" style="margin-left: auto; margin-right: auto;">
             <a href="test.html" class="btn btn-primary btn-lg btn-search">
@@ -298,7 +303,7 @@
     </div>
 
 
-    <hr class="divider" />
+    <!-- <hr class="divider" />
     <div class="container" style="max-width: 768px;">
         <div class="row">
             <div class="col-sm-12">
@@ -338,7 +343,7 @@
             </video>
             <p class="compare-caption">a blue jay standing on a large basket of rainbow macarons.</p>
         </div>
-    </div>
+    </div> -->
 
 
 
