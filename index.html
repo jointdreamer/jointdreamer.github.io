@@ -71,24 +71,6 @@
         </div>
     </div>
 
-<!--    <hr class="divider" />-->
-<!--    <div class="container" style="max-width: 768px;">-->
-<!--        <div class="row captioned_videos">-->
-<!--            <div class="col-md-12">-->
-<!--                &lt;!&ndash; Large format devices &ndash;&gt;-->
-<!--                <video class="video lazy d-none d-xs-none d-sm-block" autoplay loop playsinline muted poster="https://dreamfusion-cdn.ajayj.com/sept28/wipe_opposite_6x4_smoothstep.jpg">-->
-<!--                    <source data-src="https://dreamfusion-cdn.ajayj.com/sept28/wipe_opposite_6x4_smoothstep.mp4" type="video/mp4">-->
-<!--                </video>-->
-<!--                &lt;!&ndash; Small format devices &ndash;&gt;-->
-<!--                <video class="video lazy d-xs-block d-sm-none" autoplay loop playsinline muted poster="https://dreamfusion-cdn.ajayj.com/sept28/shaded_3x3_smoothstep.jpg">-->
-<!--                    <source data-src="https://dreamfusion-cdn.ajayj.com/sept28/shaded_3x3_smoothstep.mp4" type="video/mp4">-->
-<!--                </video>-->
-<!--                <h6 class="caption">JointDreamer excels in generating geometrically consistent and high-fidelity 3D assets,-->
-<!--                    adhering to complex textual descriptions.</h6>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
     <hr class="divider" />
     <div class="container" style="max-width: 768px;">
         <div class="row">
@@ -101,16 +83,15 @@
                 </p>
                 <p>
                     In this work, we propose Joint Score Distillation (JSD), a new paradigm that ensures coherent 3D generations. Specifically,
-                    we model the joint rendering distribution, which introduces an energy function to capture the coherence among denoised images from the diffusion model.
-                    We then derive the joint score distillation on multiple rendered views of the 3D representation, as opposed to a single view in SDS. In addition,
-                    we we instantiate three universal view-aware models as energy functions, demonstrating compatibility with JSD.
+                    we model the joint image distribution, which introduces an energy function to capture the coherence among denoised images
+                    from the diffusion model. We then derive the joint score distillation on multiple rendered views of the 3D representation,
+                    as opposed to a single view in SDS. In addition, we instantiate three universal view-aware models as energy functions, demonstrating compatibility with JSD.
                 </p>
                 <p>
-                    Empirically, JSD significantly mitigates the 3D inconsistency problem in SDS,
-                    while maintaining text congruence. Moreover, we introduce the Geometry Fading scheme and Classifier-Free Guidance (CFG)
-                    Switching strategy to enhance generative details. Our framework, JointDreamer, establishes a new benchmark in
-                    text-to-3D generation, achieving outstanding results with an 88.5% CLIP R-Precision and 27.7% CLIP Score.
-                    These metrics demonstrate exceptional text congruence, as well as remarkable geometric consistency and texture fidelity.
+                    Empirically, JSD significantly mitigates the 3D inconsistency problem in SDS, while maintaining text congruence. Moreover,
+                    we introduce the Geometry Fading scheme and Classifier-Free Guidance (CFG) Switching strategy to enhance generative details.
+                    Our framework, JointDreamer, establishes a new benchmark in text-to-3D generation, achieving outstanding results with an 88.5\%
+                    CLIP R-Precision and 27.7\% CLIP Score. These metrics demonstrate exceptional text congruence, as well as remarkable geometric consistency and texture fidelity.
                 </p>
             </div>
             <div class="col-md-12">
@@ -129,64 +110,45 @@
         </div>
 
         <div class="row captioned_videos">
-            <div class="col-4">
+            <div class="col-6">
                 <div class="video-compare-container" style="width: 100%">
                     <video class="video lazy" id="ex1" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
-                        <source data-src="static/examples/spiderman.mp4" type="video/mp4">
+                        <source data-src="static/examples/panda.mp4" type="video/mp4">
                     </video>
                     <canvas height="752" class="videoMerge" id="ex1Merge" width="1002"></canvas>
                 </div>
-                <h6 class="caption">A DSLR photo of a pink Spiderman dancing ballet, Marvel character HD, highly detailed 3D model</h6>
+                <h6 class="caption">A panda rowing a boat in a pond, 8K, HD, photorealistic</h6>
             </div>
-            <div class="col-4">
+            <div class="col-6">
                 <div class="video-compare-container" style="width: 100%">
                     <video class="video lazy" id="ex2" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
-                        <source data-src="static/examples/woodies.mp4" type="video/mp4">
+                        <source data-src="static/examples/beagle.mp4" type="video/mp4">
                     </video>
                     <canvas height="752" class="videoMerge" id="ex2Merge" width="1002"></canvas>
                 </div>
-                <h6 class="caption">Woodies talking with each other, Toy Story, Anime style, more details, 8K, HD</h6>
-            </div>
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="ex3" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
-                        <source data-src="static/examples/dragon.mp4" type="video/mp4">
-                    </video>
-                    <canvas height="752" class="videoMerge" id="ex3Merge" width="1002"></canvas>
-                </div>
-                <h6 class="caption">A wide angle zoomed out DSLR photo of a red dragon dressed in a tuxedo and playing chess, 8K, HD, photorealistic</h6>
+                <h6 class="caption">a confused beagle sitting at a desk working on homework</h6>
             </div>
         </div>
 
         <div class="row captioned_videos">
-            <div class="col-4">
+            <div class="col-6">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex3" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/examples/woodies.mp4" type="video/mp4">
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex3Merge" width="1002"></canvas>
+                </div>
+                <h6 class="caption">Woodies talking with each other, Toy Story, Anime style, more details, 8K, HD</h6>
+            </div>
+            <div class="col-6">
                 <div class="video-compare-container" style="width: 100%">
                     <video class="video lazy" id="ex4" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
-                        <source data-src="static/examples/panda.mp4" type="video/mp4">
+                        <source data-src="static/examples/michal.mp4" type="video/mp4">
                     </video>
                     <canvas height="752" class="videoMerge" id="ex4Merge" width="1002"></canvas>
                 </div>
-                <h6 class="caption">A panda rowing a boat in a pond, 8K, HD, photorealistic</h6>
+                <h6 class="caption">Image of Michael Jackson, showcasing his signature dance moves, fedora hat, and stylish wardrobe</h6>
             </div>
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="ex5" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
-                        <source data-src="static/examples/beagle.mp4" type="video/mp4">
-                    </video>
-                    <canvas height="752" class="videoMerge" id="ex5Merge" width="1002"></canvas>
-                </div>
-                <h6 class="caption">a confused beagle sitting at a desk working on homework</h6>
-            </div>
-            <div class="col-4">
-                <div class="video-compare-container" style="width: 100%">
-                    <video class="video lazy" id="ex6" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
-                        <source data-src="static/examples/queen.mp4" type="video/mp4">
-                    </video>
-                    <canvas height="752" class="videoMerge" id="ex6Merge" width="1002"></canvas>
-                </div>
-                <h6 class="caption">A DSLR photo of Queen Elizabeth riding a motorcycle, 8K, HD, photorealistic</h6>
-            </div>
-
         </div>
 
         <div class="col-sm-4 my-auto center" style="margin-left: auto; margin-right: auto;">
@@ -228,12 +190,6 @@
             </video>
             <p class="compare-caption">a DSLR photo of a squirrel playing guitar</p>
         </div>
-        <div class="row captioned_videos" style="margin-top: 0px; margin-bottom: 0px ;">
-            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
-                <source data-src="static/comparison/Corgi_riding_a_rocket.mp4" type="video/mp4">
-            </video>
-            <p class="compare-caption">Corgi riding a rocket</p>
-        </div>
         <div class="row captioned_videos" id="comp" style="margin-top: 0px; margin-bottom: 0px ;">
             <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
                 <source data-src="static/comparison/a_zoomed_out_DSLR_photo_of_a_fox_working_on_a_jigsaw_puzzle,_8K,_HD,_photorealistic.mp4" type="video/mp4">
@@ -248,102 +204,18 @@
         </div>
         <div class="row captioned_videos" style="margin-top: 0px; margin-bottom: 0px ;">
             <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
-                <source data-src="static/comparison/a_white_cat_curled_up_on_a_wooden_chair.mp4" type="video/mp4">
-            </video>
-            <p class="compare-caption">a white cat curled up on a wooden chair</p>
-        </div>
-        <div class="row captioned_videos" style="margin-top: 0px; margin-bottom: 0px ;">
-            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
-                <source data-src="static/comparison/a_dog_is_sleeping_on_a_pile_of_pillows.mp4" type="video/mp4">
-            </video>
-            <p class="compare-caption">a dog is sleeping on a pile of pillows</p>
-        </div>
-        <div class="row captioned_videos" style="margin-top: 0px; margin-bottom: 0px ;">
-            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
-                <source data-src="static/comparison/A_DSLR_photo_of_Kungfu_panda_eating_a_dumpling,_movie_style,_8K,_HD,_photorealistic.mp4" type="video/mp4">
-            </video>
-            <p class="compare-caption">A DSLR photo of Kungfu panda eating a dumpling, movie style, 8K, HD, photorealistic</p>
-        </div>
-        <div class="row captioned_videos" style="margin-top: 0px; margin-bottom: 0px ;">
-            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
-                <source data-src="static/comparison/A_pink_Spiderman_dancing_ballet.mp4" type="video/mp4">
-            </video>
-            <p class="compare-caption">A pink Spiderman dancing ballet, Marvel character HD, highly detailed 3D model</p>
-        </div>
-        <div class="row captioned_videos" style="margin-top: 0px; margin-bottom: 0px ;">
-            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
-                <source data-src="static/comparison/a_rabbit_cutting_grass_with_a_lawnmower.mp4" type="video/mp4">
-            </video>
-            <p class="compare-caption">a rabbit cutting grass with a lawnmower</p>
-        </div>
-        <div class="row captioned_videos" style="margin-top: 0px; margin-bottom: 0px ;">
-            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
                 <source data-src="static/comparison/a_wide_angle_zoomed_out_DSLR_photo_of_a_skiing_penguin_wearing_a_puffy_jacket.mp4" type="video/mp4">
             </video>
             <p class="compare-caption">a wide angle zoomed out DSLR photo of a skiing penguin wearing a puffy jacket</p>
         </div>
-        <div class="row captioned_videos" style="margin-top: 0px; margin-bottom: 0px ;">
-            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
-                <source data-src="static/comparison/a_zoomed_out_DSLR_photo_of_a_bear_playing_electric_bass.mp4" type="video/mp4">
-            </video>
-            <p class="compare-caption">a zoomed out DSLR photo of a bear playing electric bass</p>
-        </div>
-        <div class="row captioned_videos" style="margin-top: 0px; margin-bottom: 0px ;">
-            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
-                <source data-src="static/comparison/Woodies_talking_with_each_other.mp4" type="video/mp4">
-            </video>
-            <p class="compare-caption">Woodies talking with each other, Toy Story, Anime style, more details, 8K, HD</p>
-        </div>
 
-        <!-- <div class="col-sm-4 my-auto center" style="margin-left: auto; margin-right: auto;">
-            <a href="test.html" class="btn btn-primary btn-lg btn-search">
-                Full Test Results (Coming Soon)
+        <div class="col-sm-4 my-auto center" style="margin-left: auto; margin-right: auto;">
+            <a href="compare.html" class="btn btn-primary btn-lg btn-search">
+                Full Comparison
             </a>
-        </div> -->
+        </div>
     </div>
 
-
-    <!-- <hr class="divider" />
-    <div class="container" style="max-width: 768px;">
-        <div class="row">
-            <div class="col-sm-12">
-                <h2>Universal View-aware Models</h2>
-                <p>Our JSD can incorporate with various view-aware models to capture inter-view coherency.</p>
-            </div>
-        </div>
-        <div class="row" style="margin-bottom: 0px;">
-            <div class="col-lg-15 compare-title">
-                <p>Baseline (SDS)</p>
-            </div>
-            <div class="col-lg-15 compare-title">
-                <p>Binary Classification Model</p>
-            </div>
-            <div class="col-lg-15 compare-title">
-                <p>Image-to-Image Translation Model</p>
-            </div>
-            <div class="col-lg-15 compare-title">
-                <p>Multi-view Generation Model (JointDreamer)</p>
-            </div>
-        </div>
-        <div class="row captioned_videos" style="margin-top: 0px; margin-bottom: 0px ;">
-            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
-                <source data-src="static/comparison/panda.mp4" type="video/mp4">
-            </video>
-            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
-                <source data-src="static/comparison/panda-normal.mp4" type="video/mp4">
-            </video>
-            <p class="compare-caption">A panda rowing a boat in a pond.</p>
-        </div>
-        <div class="row captioned_videos" style="margin-top: 0px; margin-bottom: 0px ;">
-            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
-                <source data-src="static/comparison/bird.mp4" type="video/mp4">
-            </video>
-            <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
-                <source data-src="static/comparison/bird-normal.mp4" type="video/mp4">
-            </video>
-            <p class="compare-caption">a blue jay standing on a large basket of rainbow macarons.</p>
-        </div>
-    </div> -->
 
 
 
